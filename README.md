@@ -52,3 +52,16 @@ We especially want to acknowledge the University of Luxembourg's information sec
 We understand that while open-source software is free, maintaining and improving these projects requires significant resources. The University of Luxembourg’s information security team has demonstrated their strong commitment to the open-source community, contributing not just within their university but to users and developers globally. We hope this acknowledgment will help them continue to secure the support and resources necessary to further advance open-source initiatives.
 
 Once again, we express our sincere gratitude to the University of Luxembourg's CISO team for their valuable advice and assistance.
+
+## Cloudflare Pagesへのデプロイ
+
+このプロジェクトは、Cloudflare Pagesを利用して簡単にWebサイトとしてデプロイできます。
+
+1.  Cloudflareのアカウントにログインし、「Pages」に移動します。
+2.  「新しいプロジェクトを作成」を選択し、このGitHubリポジトリに接続します。
+3.  ビルド設定を以下のように構成します。
+    *   **ビルドコマンド:** `npm run build:website`
+    *   **ビルド出力ディレクトリ:** `dist`
+4.  「保存してデプロイする」をクリックします。
+
+以上で、Cloudflare Pagesへのデプロイが完了します。
