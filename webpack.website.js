@@ -3,6 +3,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -65,6 +66,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./view/website.html",
       filename: "index.html",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "_locales", to: "_locales" },
+      ],
     }),
   ],
   resolve: {
