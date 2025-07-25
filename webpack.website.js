@@ -63,7 +63,8 @@ module.exports = {
       filename: "style.css",
     }),
     new HtmlWebpackPlugin({
-      template: "./dist/index.html",
+      template: "./view/website.html",
+      filename: "index.html",
     }),
   ],
   resolve: {
