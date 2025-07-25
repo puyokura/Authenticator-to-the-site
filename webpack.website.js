@@ -2,6 +2,7 @@ const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -60,6 +61,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./dist/index.html",
     }),
   ],
   resolve: {
